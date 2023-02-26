@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOSTRAR DATOS</title>
+</head>
+<body>
+    <p><button onclick="resultado()"> Tus datos son: </button></p>
+    <p><button onclick="resultado2()"> Tus datos con alert son: </button></p>
+    <p><button onclick="resultado3()"> Tus datos en consola son: </button></p>
+    <p id="nombre"></p>
+    <p id="apellido"></p>
+    <p id="edad"></p>
+
+    <script>
+          let vNombre = prompt("¿Cual es tu nombre?");
+          let vApellido = prompt("¿Cual es tu apellido?");
+          let vEdad = Number(prompt("¿Cual es tu edad?"));
+
+        function resultado(){
+
+            document.getElementById("nombre").innerHTML = vNombre;
+            document.getElementById("apellido").innerHTML = vApellido;
+            document.getElementById("edad").innerHTML = vEdad;
+
+          }
+
+        function resultado2(){
+
+            alert("Tu nombre es:" + " " + vNombre);
+            alert("Tu apellido es:" + " " + vApellido);
+            alert("Tu edad es:" + " " + vEdad);
+
+        }
+
+        function resultado3(){
+
+            console.log(vNombre);
+            console.log(vApellido);
+            console.log(vEdad);
+        }
+
+        
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OPERADOR TERNARIO</title>
+</head>
+
+<body>
+    <script>
+        /*
+        - Operador ternario con una sentencia:
+
+        (condición) ? true : false
+
+        - Operador ternario con varias sentencias:
+
+        (condición) ?
+            (primera sentencia,
+            segunda sentencia)
+            :
+            (primera sentencia,
+            segunda sentencia)
+
+            * Se pueden poner todas las sentencias que queramos y no es obligatorio que si el true
+            tiene varias sentencias el false también las tenga, se puede mezclar como queramos.
+        */
+
+
+        /*
+        - Vamos a utilizar el Operador Ternario para saber si un número es par o no.
+        - La forma de saberlo es sacando su módulo o resto entre 2 y en el caso de que sea 0 será par y si no sera impar.
+        */
+
+        let num = 2
+
+        (num % 2 == 0) ? console.log(`${num} es par.`) : console.log(`${num} es impar.`);
+
+        // Si la condición es true (?) dirá que es par y si es false (:) dirá que es impar.
+
+        (num % 2 == 0) ?
+        (console.log(`${num} es par.`),
+            console.log(`${num} es par 2.`))
+            :
+            console.log(`${num} es impar.`);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEDIA DE 3 NOTAS</title>
+</head>
+<body>
+
+    <p>Indica tus 3 notas:</p>
+    <p><input type="number" id="nota1"></p>
+    <p><input type="number" id="nota2"></p>
+    <p><input type="number" id="nota3"></p>
+    <p><button onclick="media()"> Tu nota media es: </button></p>
+    <p id="media"></p>
+
+
+    <script>
+        function media(){
+
+            let vMedia = Number(document.getElementById("nota1").value) + 
+            Number(document.getElementById("nota2").value) + 
+            Number(document.getElementById("nota3").value);
+            document.getElementById("media").innerHTML = "Tu nota media es:" + " " + vMedia / 3;
+
+            alert(vMedia / 3);
+
+            console.log(vMedia / 3);
+        }
+
+    
+
+    </script>
+
+</body>
+</html>

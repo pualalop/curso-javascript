@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONDICIONALES</title>
+</head>
+
+<body>
+    <script>
+        // Condicional simple:
+
+        let num = 5;
+
+        if (num > 0) console.log(`${num} es mayor que 0`); // Está diciendo que si num (5) es mayor que 0, dime que es mayor que 0.
+        if (num > 0) {
+            console.log(`${num} es mayor que 0`);
+            console.log(`${num} es mayor que 0`); // Si tenemos más de una cosa que hacer se pone entre llaves {}.
+        }
+
+        // Condicional compuesto:
+
+        num = -5
+
+        if (num > 0) {
+            console.log(`${num} es mayor que 0`); // Si num es mayor que 0 haz esto.
+
+        } else {
+            console.log(`${num} es menor que 0`); // Si no, haz esto otro.
+        }
+
+        // Condicionales múltiples: Cuando necesitamos evaluar más de una condición
+
+        num = 0
+
+        if (num > 0) {
+            console.log(`${num} es mayor que 0`); // Si num es mayor que 0 haz esto.
+        } else if (num < 0) {
+            console.log(`${num} es menor que 0`); // Si num es menor que 0 haz esto.
+        } else {
+            console.log(`${num} es igual que 0`); // Si no, num es igual que 0.
+        }
+
+        /* Se pueden comprobar varias cosas en la misma condición sin límite alguno, 
+        para ello necesitamos operadores lógicos:
+        - && (and) - || (o)
+        */
+
+        let num1 = 1
+        let num2 = 5
+
+        if (num1 > 0 && num2 > 0) {
+            console.log(`${num1} y ${num2} son mayores que 0.`);
+        }
+        // Si num1 es mayor que 0 y (&&) num2 es mayor que 0 haz esto. Pero si num2 si que cumple la regla y num1 no, no entra en la condición y no se ejecuta.
+
+        if (num1 > 0 || num2 > 0) {
+            console.log(`${num1} o ${num2} son mayores que 0.`); // Si num1 es mayor que 0 o (||) num2 es mayor que 0 haz esto.
+        }
+
+        // También podemos anidar ifs (meter if dentro de if):
+
+        if (num1 > 0) {
+            if (num2 > 0) { // El segundo if solo se ejecuta si el primero se cumple.
+                console.log(`${num1} y ${num2} son mayores que 0.`);
+            } else if (num2 < 0) {
+                console.log(`${num1} es mayor que 0 y num 2 es menor que 0`);
+            } else {
+                console.log(`${num1} es mayor que 0 y num 2 es igual a 0`);
+            } // Hata aquí es la comprovación de num1.
+        } else if (num1 < 0) {
+            if (num2 > 0) {
+                console.log(`${num1} no es mayor que 0 y ${num2} es mayor que 0.`);
+            } else if (num2 < 0) {
+                console.log(`${num1} y ${num2} son menores que 0`);
+            } else {
+                console.log(`${num1} es menor que 0 y num 2 es igual a 0`);
+            }
+        } else {
+            if (num2 > 0) {
+                console.log(`${num1} es igual a 0 y ${num2} es mayor que 0.`);
+            } else if (num2 < 0) {
+                console.log(`${num1} es igual a 0 y ${num2} es menor que 0`);
+            } else {
+                console.log(`${num1} y ${num2} son iguales a 0`);
+            }
+        }
+
+        // Con strings:
+
+        let word = "Hola";
+
+        if (word.length > 4) {
+            console.log(`${word} tiene más de 4 letras.`);
+        } else if (word.length < 4) {
+            console.log(`${word} tiene menos de 4 letras.`);
+        } else {
+            console.log(`${word} tiene 4 letras.`);
+        }
+
+        // Con booleanos:
+
+        let respuesta = true;
+
+        if (respuesta == true) console.log(`Respuesta tiene el valor true.`);
+        if (respuesta == false) console.log(`Respuesta tiene el valor false.`);
+
+        // Lo más abitual:
+
+        if (respuesta) console.log(`Respuesta tiene el valor true.`);
+        if (!respuesta) console.log(`Respuesta tiene el valor false.`); 
+        
+        // El simbolo ! por delante es un operador de negación.
+    </script>
+</body>
+
+</html>

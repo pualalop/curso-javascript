@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+   <!-- CONFIGURAR LA PAGINA WEB -->
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta keywords="veteranaria, barcelona, gatos, perros">
+
+   <title>PRIMERA SESION DE CLASES</title>
+</head>
+
+<body>
+   <h1 id="principal">PRESENTACIÓN</h1>
+
+   <p>Mi nombre es <input type="text" id="nombre"/></p>
+   <p>y trabajo como <input type="text" id="oficio"/></p>
+   <button onclick="mostrar()">DECIR HOLA</button> 
+   <p id="resultado"></p>
+
+
+   <script>   
+      function mostrar() {
+        let mensaje1 = document.getElementById("nombre").value;
+        let mensaje2 = document.getElementById("oficio").value;
+        document.getElementById("resultado").innerHTML = "Hola" + " " + mensaje1 + " " + "cómo te va de" + " " + mensaje2 + "?";
+      }
+   </script>
+</body>
+
+</html>

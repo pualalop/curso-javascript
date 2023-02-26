@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M3.EXTRA2</title>
+</head>
+<body>
+    
+    <p>Ingrese el alto de la pared: <input type="number" id="alto"></p>
+    <p>Ingrese el ancho de la pared: <input type="number" id="ancho"></p>
+    <p>Ingrese el número de capas que le quiere dar: <input type="number" id="capas"></p>
+    <button onclick="calcular"()> CALCULAR </button>
+    <p id="resultado"></p>
+
+    <script>
+
+        function calcular() {
+            const M2 = 12;
+            let vArea = Number(document.getElementById("alto").value) * Number(document.getElementById("ancho").value);
+            let vCapas = Number(document.getElementById("capas").value) * vArea;
+            let vResultado = vCapas / M2
+
+            document.getElementById("resultado").innerHTML = "Los litros de pintura necesarios son:" + " " + vResultado;
+        }
+        
+
+    </script>
+
+</body>
+</html>

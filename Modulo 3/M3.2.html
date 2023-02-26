@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULADORA ARCAICA</title>
+</head>
+<body>
+      <P>Indica un número entero: <input type="number" id="valor1" value=""></P>
+      <P>Indica un número entero: <input type="number" id="valor2" value=""></P>
+      <p><button onclick="operaciones()"> CALCULAR </button></p>
+      <p id="suma"></p>
+      <p id="resta"></p>
+      <p id="multiplicacion"></p>
+      <p id="division"></p>
+     
+    <script>
+        "use scrict";
+        function operaciones() {
+
+            let vSuma = Number(document.getElementById("valor1").value) + Number(document.getElementById("valor2").value);
+            document.getElementById("suma").innerHTML="El resultado de la suma es:" + " " + vSuma;
+
+            let vResta = Number(document.getElementById("valor1").value) - Number(document.getElementById("valor2").value);
+            document.getElementById("resta").innerHTML="El resultado de la resta es:" + " " + vResta;
+
+            let vMultiplicacion = Number(document.getElementById("valor1").value) * Number(document.getElementById("valor2").value);
+            document.getElementById("multiplicacion").innerHTML="El resultado de la multiplicacion es:" + " " + vMultiplicacion;
+
+            let vDivision = Number(document.getElementById("valor1").value) / Number(document.getElementById("valor2").value);
+            document.getElementById("division").innerHTML="El resultado de la division es:" + " " + vDivision;
+
+        }
+
+    </script>
+
+</body>
+</html>

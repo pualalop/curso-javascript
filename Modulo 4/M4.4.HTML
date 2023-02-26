@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULA LOS DÍAS DEL MES</title>
+</head>
+
+<body>
+    <h1>¿Cuantos días tiene cada mes?</h1>
+    <p>Indica en número del mes que quieres saber: <input type="number" id="mes" placeholder="Ejemplo: 5"></p>
+    <button onclick="resultado()">Resultado</button>
+    <p id="resultado"></p>
+
+    <script>
+        function resultado() {
+
+            let vMes = Number(document.getElementById("mes").value);
+            let diasMes = "";
+
+            switch (vMes) {
+
+                case 1:
+                    diasMes = "Enero tiene 31 días.";
+                    break;
+                case 2:
+                    diasMes = "Febrero tiene 28 días, 29 si es año bisiesto.";
+                    break;
+                case 3:
+                    diasMes = "Marzo tiene 31 días.";
+                    break;
+                case 4:
+                    diasMes = "Abril tiene 30 días.";
+                    break;
+                case 5:
+                    diasMes = "Mayo tiene 31 días.";
+                    break;
+                case 6:
+                    diasMes = "Junio tiene 30 días.";
+                    break;
+                case 7:
+                    diasMes = "Julio tiene 31 días.";
+                    break;
+                case 8:
+                    diasMes = "Agosto tiene 31 días.";
+                    break;
+                case 9:
+                    diasMes = "Septiembre tiene 30 días.";
+                    break;
+                case 10:
+                    diasMes = "Octubre tiene 31 días.";
+                    break;
+                case 11:
+                    diasMes = "Noviembre tiene 30 días.";
+                    break;
+                case 12:
+                    diasMes = "Diciembre tiene 31 días.";
+                    break;
+                default:
+                    diasMes = "Escribe un mes entre 1 y 12";
+            }
+            document.getElementById("resultado").innerHTML = diasMes;
+        }
+    </script>
+</body>
+
+</html>

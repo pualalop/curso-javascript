@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONDICIONAL SWITCH</title>
+</head>
+
+<body>
+    <script>
+        /*
+        Sintaxis simple:
+
+        switch(evaluación) {
+            case n1:
+                //código
+                break;
+            case n2:
+                //código
+                break;
+            
+            default:
+                //código
+        }
+
+        Sintaxis múltiple:
+
+        switch (evaluación) {
+            case n1:
+            case n2:
+            case n3:
+            case n4:
+                //código
+                break;
+            case n5:
+            case n6:
+                //código
+                break;
+
+            default:
+                //código
+        }
+        */
+
+
+        let num = 2;
+
+        switch (num) {
+            case 1:
+                console.log("Num tiene el valor 1");
+                break;
+            case 2:
+                console.log("Num tiene el valor 2");
+                break;
+            default:
+                console.log("Num no vale ni 1 ni 2");
+        }
+
+        /* 
+        - Si no pusieramos el break leeria la primera línea, la ejecutaría y,
+        como nada le dice que pare, pasa a evaluar el caso 2 y así sucesivamente.
+        - El default sirve para poner lo que queremos que pase en caso de que
+        no se cumpla ninguno de los casos.
+        */
+
+        switch (num) {
+            case 1:
+            case 3:
+            case 5:
+                console.log("Num es impar");
+                break;
+            case 2:
+            case 4:
+                console.log("Num es impar");
+                break;
+            default:
+                console.log("Lo que queramos");
+        }
+    </script>
+</body>
+
+</html>

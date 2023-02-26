@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>M5.2</title>
+</head>
+<body>
+
+    <p>Ingresa un numero entero: <input type="number" id="num1"></p>
+    <p>Ingresa un segundo numero entero: <input type="number" id="num2"></p>
+    <button onclick="getResult()">CALCULAR</button>
+
+    <script>
+        function getResult() {
+            let n1 = Number(document.getElementById("num1").value);
+            let n2 = Number(document.getElementById("num2").value);
+            let resultado = 0;
+
+            if (n1==0 && n2==0) {
+                alert ("ERROR: Al menos un numero debe ser mayor a cero.");
+                return;
+            }
+
+            if (n1<0 || n2<0) {
+                alert ("ERROR: Todos los numeros deben ser positivos.");
+                return;
+            }
+
+            if (n1>n2) {
+               let aux = n1;
+               n1 = n2;
+               n2 = aux;
+            }
+
+            for (let i = n1; i <= n2 ; i++) {
+                resultado = i + resultado
+            }
+        alert ("El resultado es: " + resultado);
+}
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOBLE Y TRIPLE</title>
+</head>
+<body>
+    
+    <h2>¿Cual es el doble y el triple de...?</h2>
+    <input type="number" id="dato" placeholder="Escribe un número aquí:">
+    <button onclick="resultado()"> Clck para resultado </button>
+    <p id="doble"></p>
+    <p id="triple"></p>
+
+    <script>
+
+        function resultado(){
+
+            let vDoble = Number(document.getElementById("dato").value) * 2;
+            document.getElementById("doble").innerHTML = "El doble es:" + " " + vDoble;
+
+            let vTriple = Number(document.getElementById("dato").value) * 3;
+            document.getElementById("triple").innerHTML = "El triple es:" + " " + vTriple;
+
+
+        }
+
+          
+
+    </script>
+
+
+    
+</body>
+</html>
